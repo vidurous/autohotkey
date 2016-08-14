@@ -1,4 +1,4 @@
-; In game macros tied to counters in this hotkey below:
+; In game macros tied to counters in this hotkey below: 27k DPS with 651 Gear Score on three target dummies 
 
 ; attack
 ;#Showtooltip
