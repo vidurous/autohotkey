@@ -1,4 +1,5 @@
 ; In game macros tied to counters in this hotkey below:
+
 ; attack
 ;#Showtooltip
 ;/startattack
