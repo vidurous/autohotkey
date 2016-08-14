@@ -19,6 +19,7 @@ rush := 0
 cooldowns := 0
 finishers := 0
 
+; define your trigger for auto_attack
 $Mbutton::
 
 if auto_attack {
@@ -129,7 +130,7 @@ else
     settimer, watcher, -100
 return
 
-; kill the auto_attack macro
+; define the kill button trigger which kills the auto_attack macro
 $Xbutton1::
 if kill_check
 {
@@ -139,7 +140,7 @@ if kill_check
     SetCapsLockState, off
     return
 }
-;Make the parsing loop no
+
 Critical
 
 kill_everything=1
