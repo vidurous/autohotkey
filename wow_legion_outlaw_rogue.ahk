@@ -27,6 +27,8 @@ if auto_attack {
     return
 }
 
+; watcher loop named auto_attack that turns the Numlock key on your keyboard on to indicate it's status
+
 auto_attack=1
     settimer, watcher, -100
     SetNumlockState, on
@@ -36,10 +38,11 @@ watcher:
 
   rush = 164
   cooldowns = 108
-
-
+  
+; start of the combat sequence loop
 Loop {
 
+; define the reset of the `attack & finishers` counters
 if attack = 166
 {
 
@@ -47,6 +50,7 @@ if attack = 166
   finishers = 0
 }
 
+; define the adrenaline rush counter and trigger the ability
 else if rush = 164
 
 {
@@ -62,6 +66,7 @@ else if rush = 164
 
 }
 
+; define the cooldowns counter and trigger the abilities
 else if cooldowns = 110
 
 {
@@ -89,7 +94,7 @@ else if cooldowns = 110
   rush += 4
 }
 
-
+; define the finishers counter and trigger the ability
 else if finishers = 24
 
 {
@@ -106,6 +111,7 @@ else if finishers = 24
 
 }
 
+; main attack sequence 
 else
     
   send 1
@@ -118,11 +124,12 @@ else
   rush += 1
 }
 
-
+; reset the state of the auto_attack numlock status loop
   if auto_attack
     settimer, watcher, -100
 return
 
+; kill the auto_attack macro
 $Xbutton1::
 if kill_check
 {
