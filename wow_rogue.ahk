@@ -1,3 +1,17 @@
+; In game macros tied to counters in this hotkey below:
+; attack
+;#Showtooltip
+;/startattack
+;/castsequence reset=3 Saber Slash, Pistol Shot, Ghostly Strike, Ghostly Strike, Run Through
+
+; cooldowns
+; #Showtooltip
+;/castsequence reset=20 Vanish, Cheap Shot, Slice and Dice
+
+; finishers
+;#Showtooltip
+;/castsequence Slice and Dice
+
 Process,priority,,High 
 attack := 0
 rush := 0
